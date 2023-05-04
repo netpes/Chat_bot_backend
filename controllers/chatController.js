@@ -1,6 +1,5 @@
 const chatsSchema = require("../schema/chatsSchema");
 const userSchema = require("../schema/signupSchema");
-const { unstable_ClassNameGenerator } = require("@mui/material");
 
 module.exports = {
   getChatData: (userId) => {
