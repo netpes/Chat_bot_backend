@@ -1,0 +1,17 @@
+answer bot:
+// if (answer !== false && answer !== preAnswer) {
+//   // console.log(answer);
+//   updateChat(answer, room, "BOT", admin, time, date).then(() => {
+//     const botReplay = [{ sender: "BOT", message: answer }];
+//     socket.join(room);
+//     io.to(room).emit("chat message", botReplay);
+//     SendChatData(room);
+//     preAnswer = answer;
+//   });
+// }
+
+
+socket.on("send-bot", (question, answer, admin) => {
+        console.log("recived");
+        CreateAnswer(question, answer, admin).then(console.log("answer saved"));
+      });
