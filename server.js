@@ -44,6 +44,12 @@ mongoose?.connection.on("connected", () => {
   console.log("connected");
 });
 
+app.use(function (req, res, next) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  next();
+});
 app.get("/", (req, res) => {
   res.sendFile("../src/components/userChat.js");
   console.log("this is true");
