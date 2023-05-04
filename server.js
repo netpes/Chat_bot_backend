@@ -51,10 +51,6 @@ app.use(function (req, res, next) {
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
   next();
 });
-app.get("/", (req, res) => {
-  res.sendFile("../src/components/userChat.js");
-  console.log("this is true");
-});
 
 //SOCKET-IO:
 
