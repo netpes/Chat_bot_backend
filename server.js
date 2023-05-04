@@ -30,7 +30,7 @@ app.engine("html", require("ejs").renderFile);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(forms.array());
-app.use(cors({ origin: " http://localhost:3000" }));
+app.use(cors({ origin: "https://48cacb7a.chat-bot-6ai.pages.dev" }));
 app.use("/", users);
 
 // mongo connection
