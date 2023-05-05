@@ -58,6 +58,12 @@ module.exports = {
               id: users._id,
               name: users.name,
               role: users.role,
+              status: true,
+            });
+          } else {
+            res.status(200).json({
+              error: "Email or password invalid!",
+              status: false,
             });
           }
           console.log(users);
